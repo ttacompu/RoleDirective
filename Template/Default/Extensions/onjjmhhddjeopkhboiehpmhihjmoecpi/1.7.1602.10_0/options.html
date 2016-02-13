@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html> -->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="onelogStyles.css">
+		<title>Onelog Options Page</title>
+	</head>
+
+	<body>
+
+		<div id="divOnelogHeader" align="center" class="olPromptDivLookOptions olOptionsSize">
+			<img id="olLogo" src="res/olLogo240.png"
+			style="position:relative; left: 280px;" align="middle"/>
+		</div>
+
+		<div id="divOnelogOptions" class="olPromptDivLookOptions olOptionsSize">
+			<label id="olPleaseWait" class="olFont olFontBig olFontBlue" align="middle">Please wait</label>
+		</div>
+
+		<div id="divOnelogControl" class="olPromptDivLookOptions olOptionsSize olControlContent">
+			<div id="divOnelogButtons" align="left" class="olPromptDivLookOptions olOptionsSize olControlContentChild">
+				<button id="olSaveOptions" title="Save" type="button">
+					<img id="olImgMatterSave" src="res/olSave16.png"/>
+				</button>
+				<button id="olDefaultOptions" title="Revert to default values" type="button">
+					<img id="olImgDefaultOptions" src="res/olRevertToDefault16.png"/>
+				</button>
+			</div>
+
+			<div id="divOnelogStatus" class="olPromptDivLookOptions olOptionsSize olControlContentChild"></div>
+		</div>
+
+		<div id="olPromptAdministrativeSection" class="olInherit olFont olFontNormal olFontBlue olPromptDivLookOptions olPromptDivSizeNormal olOverlay" style="display: none">
+			<h2 class="olInherit olFontVeryBig"><img id="olImgLogo32" src="res/icon32_blue.png" class="olInherit olImg olImg32 olImgPrompt "/><label class="olInherit olFont olFontBlue olLabel">Administrative settings</label></h2>
+			<form class="olInherit olPromptDivLookOptionsForm olFontNormal">
+				<div class="olInherit olPromptDivScrolableNormal">
+					<div id="olAdministrativeSection" class="olInherit olDivInterface olFontNormal" style="width: 100%">
+						Please provide password to enter this section
+					</div>
+					<br />
+					<div class="olInherit olDivInterface olFontNormal" style="width: 100%">
+						<input type="password" id="olAdministrativePasswordInput" class="olInherit olInput olRounded olFont olFontNormal olFontBlue" tabindex=1/>
+					</div>
+					<footer class="olInherit">
+						<button id="olPromptAdministrativeSectionOK" type="button" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium" style="float:right!important">
+							OK
+						</button>
+					</footer>
+				</div>
+			</form>
+		</div>
+
+	</body>
+
+	<script src="kango-ui/kango_api.js"></script>
+	<script src="jQuery.js"></script>
+	<script src="modOptions.js"></script>
+	<script src="modFunctions.js"></script>
+	<script src="modDictionaries.js"></script>
+	<script src="pageContent.js"></script>
+	<script src="options.js"></script>
+</html>

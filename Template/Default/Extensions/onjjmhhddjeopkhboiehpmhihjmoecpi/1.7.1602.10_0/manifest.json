@@ -1,0 +1,27 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "includes/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Onelog extension",
+   "homepage_url": "http://www.onelog.com/",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/button.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtUUEJVvxpeZRxSaC/OUBA5PwrMYzf/EtDkIRVwvmjS31SCda2GqXRVejOxx3u5PVAjouty+Z4Weq8QKS6p5xsi9Ki4MrYY8fahI0EXsbUuwNawrI/6WIRzyCaSUY4qbterVbGOJaWtQd9BbVJGw7RVWlVQuc5+BcC1il3SPkEE+6Sfv1PB4x5uUimfyUbetSbwKaAK1x7deUJj2CasOTid/cR057He+E2Wd2x1NBS/bCxiLRDP5ODKlJVu9sr7svle+Qv+O1IvYOISEtTto/8T77oCvZH+p+uytl76iDt89HILaZEwqkMl4Xr4Bm1ktt9YGyE+87mb0BYKUVSBkjqwIDAQAB",
+   "manifest_version": 2,
+   "name": "Onelog",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "contextMenus", "webNavigation", "notifications", "cookies", "webRequest", "webRequestBlocking", "background", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.7.1602.10",
+   "web_accessible_resources": [ "res/*", "assets/*", "icons/*" ]
+}

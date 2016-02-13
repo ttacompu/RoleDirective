@@ -1,0 +1,23 @@
+{
+    "content_scripts": [
+        "jQuery.js", 
+        "idleTimer.js", 
+        "pageContent.js"
+    ], 
+    "description": "Onelog extension", 
+    "creator": "ITS", 
+    "framework_version": "1.7.9 60d09f3ec51b", 
+    "background_scripts": [
+        "jQuery.js", 
+        "modData.js", 
+        "modOptions.js", 
+        "modFunctions.js", 
+        "extension.js"
+    ], 
+    "homepage_url": "http://www.onelog.com/", 
+    "version": "1.7.1602.10", 
+    "options_page": "options.html", 
+    "framework_package_id": "dev", 
+    "id": "addons@onelog.com", 
+    "name": "Onelog"
+}

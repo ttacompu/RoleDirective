@@ -1,0 +1,13 @@
+{
+	"version": "1.0.0",
+	"name": "ASP.NET",
+	"private": true,
+  "devDependencies": {
+    "jquery": "1.9.1",
+    "angular": "1.4.8",
+    "angular-resource": "1.4.8",
+    "angular-mocks": "1.4.8",
+    "jasmine": "2.4.1",
+    "underscore": "^1.8.3"
+  }
+}

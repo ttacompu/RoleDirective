@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=7"/> -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <link rel="stylesheet" type="text/css" href="onelogStyles.css">
+
+    </head>
+    <body id='olBody'>
+        <!-- <div id="olEnvelopeEvalScripts">
+            <script id="olSourceEvalScriptolJSInject" type="text/javascript"></script>
+            <script id="olSourceEvalScriptolJSInjectBefore" type="text/javascript"></script>
+            <script id="olSourceEvalScriptolJSInjectAfter" type="text/javascript"></script>
+            </div id="olEnvelopeEvalScripts"> -->
+            <div id="olEnvelopeMisc">
+                <div id="olPromptLabelCalculationDiv" class="olFont olDisplayNone" style="width: 10000px">
+                    <!--
+                    ----------------------------------------------------------------------------------------------------*** Label Calculation Div ***
+                    -->
+                    <span>
+                        <label id="olLabelCalculation" class="olDisplayInline">
+                        </label>
+                    </span>
+                </div>
+                <div id="olPromptMisc" class="olInherit" >
+                    <!--
+                    --------------------------------------------------------------------------------------------------------*** Misc ***
+                    -->
+                    <input type="olTypetext" id="olSourceEval" class="olInherit"/>
+                </div>
+                </div id="olEnvelopeMisc">
+                <div id="olEnvelopeResources">
+                    <div id="olPromptMatter" class="olInherit olFont olFontNormal olFontBlue olPromptDivLook olPromptDivSizeNormal olOverlay" >
+                        <!--
+                        --------------------------------------------------------------------------------------------------------*** Matter ***
+                        -->
+                        <a class="olInherit close">
+                        </a>
+                        <div id="olImgMatterCancel" class="olInherit olClose olImg olImg24"></div>
+                        <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                        <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                        JS_AddMatterDetails
+                        </h2>
+                        <form class="olInherit olPromptDivLookForm olFontNormal">
+                            <div class = "olInherit olPromptMinHeightContentDiv olFontNormal">
+                                <div id="olMatterDivSelect" class="olInherit olFontNormal olDivInterface">
+                                    <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal">
+                                        <label id="olMatterDivSelectLabel" class="olInherit olFont olFontNormal olFontBlue olLabelInRow olLabelSizeMid">
+                                            JS_MatterNumberLabel
+                                        </label>
+                                        <span class="olInherit olFontNormal">
+                                            <div id="olDivMatterList" class="olInherit olSelectDiv olRounded">
+                                                <select id="olMatterList" class="olInherit olSelect olRounded olFont olFontNormal olFontBlue"></select>
+                                                <input type="olTypetext" id="olNewMatter" class="olInherit olOverflowInput olFont olFontNormal olFontBlue" tabindex="1"/>
+                                            </div>
+                                        </span>
+                                        <button id="olMatterSearch" class="olInherit olMultipleColourImage olImgSearch16 olIconNormal olFontNormal olFontWhite olBtnNormal oBtnSizeNormal olDisplayInlineBlock" olStyleFixed="display: inline-block" title="JS_MatterSearch" type="button"></button>
+                                    </div>
+                                </div>
+                                <div id="olMatterDivTimekeeper" class="olInherit olFontNormal olDivInterface">
+                                    <br />
+                                    <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal">
+                                        <label id="olMatterDivTimekeeperLabel" class="olInherit olFont olFontNormal olFontBlue olLabelInRow olLabelSizeMid">
+                                            JS_PersonalCodeLabelText
+                                        </label>
+                                        <span class="olInherit olFontNormal">
+                                            <div id="olDivTimekeeperList" class="olInherit olSelectDiv olRounded">
+                                                <select id="olTimekeeperList" class="olInherit olSelect olRounded olFont olFontNormal olFontBlue"></select>
+                                                <input type="olTypetext" id="olNewTimekeeper" class="olInherit olFont olFontNormal olFontBlue olOverflowInput" tabindex="2"/>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <label id="olTimekeeperInfo" class = "olInherit olFont olFontSmall olFontBlue olLabel olLabelSizeFull olSubTextInfo">
+                                        JS_PersonalCodeLengthWrong
+                                    </label>
+                                </div>
+
+                                <div id="olMatterDivComment" class="olInherit olFontNormal olDivInterface">
+                                    <br />
+                                    <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal">
+                                        <label id="olMatterDivCommentLabel" class="olInherit olFont olFontNormal olFontBlue olLabelInRow olLabelSizeMid">
+                                            JS_CommentLabelText
+                                        </label>
+                                        <span class="olInherit olFontNormal">
+                                            <input type="olTypetext" id="olNewComment" class="olInherit olInput olFont olFontNormal olFontBlue olRounded"  tabindex="3"/>
+                                        </span>
+                                        <button id="olCommentSelect" class="olInherit olIconNormal olFontNormal olFontWhite olBtnNormal oBtnSizeNormal olDisplayInlineBlock" olStyleFixed="display: inline-block" title="JS_SelectComment" type="button"></button>
+                                        <button id="olMatterReset" class="olInherit olIconNormal olFontNormal olFontWhite olBtnNormal oBtnSizeNormal olDisplayInlineBlock" olStyleFixed="display: inline-block" title="JS_Reset" type="button"></button>
+                                    </div>
+                                    <label id="olCommentInfo" class="olInherit olFont olFontBlue olLabel olLabelSizeFull olFontSmall olSubTextInfo">
+                                        JS_CommentLengthWrong
+                                    </label>
+                                </div>
+                            </div>
+                            <footer class="olInherit">
+                                <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal" style="width: inherit !important">
+                                    <span class="olInherit">
+                                        <div class="olInherit olDivInterfaceRow olDivNoWrap" style="width: inherit !important">
+                                            <label id="olInfoText" class="olInherit olFont olFontBlue olFontSmall olLabelInRow olLabelInfoText olDivNoWrap" title="">
+                                            </label>
+                                        </div>
+                                    </span>
+                                    <button id="olMatterOK" type="button" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olFloatRight" disabled>
+                                        JS_OKLabel
+                                    </button>
+                                </div>
+                            </footer>
+                        </form>
+                    </div>
+
+                    <div id="olPromptComment" class="olInherit olFont olFontNormal olFontBlue olPromptDivLook olPromptDivSizeBig olOverlay" >
+                        <!--
+                        --------------------------------------------------------------------------------------------------------*** Comment ***
+                        -->
+                        <div id="olImgCommentCancel" class="olInherit olClose olImg olImg24"></div>
+                        <h2 class="olInherit olFont olFontVeryBig olFontBlue" >
+                        <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                        JS_CommentLabelText
+                        </h2>
+                        <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                            <div class="olInherit olPromptDivScrolableNormal">
+                                <div id="olComments" class="olInherit olDivInterface olFontNormal olWidth100"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="olPromptMatterSearch" class="olInherit olFont olFontNormal olFontBlue olPromptDivLook olPromptDivSizeBig olOverlay">
+                        <!--
+                        --------------------------------------------------------------------------------------------------------*** Matter search ***
+                        -->
+                        <a class="olInherit close">
+                        </a>
+                        <div id="olImgMatterSearchCancel" class="olInherit olClose olImg olImg24"></div>
+                        <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                        <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                        JS_MatterSearch
+                        </h2>
+                        <form class="olPromptDivLookForm olInherit olFontNormal">
+                            <div class = "olInherit olPromptMinHeightContentDiv olFontNormal">
+                                <div id="olMatterSearchITop" class="olInherit olDivInterface">
+                                    <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal">
+                                        <div id="olDivMatterSearchType" class="olInherit olSelectDiv olRounded">
+                                            <button id="olImgMatterSearchType" class="olInherit olImgMatterSearchType16 olImg olImg16" type="button"></button>
+                                            <select id="olMatterSearchType" class="olInherit olSelect olFont olFontNormal olFontBlue">
+                                                <option value="mNumber">
+                                                    JS_MatterNumberLabel
+                                                </option>
+                                                <option value="mName">
+                                                    JS_MatterNameLabel
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <span class="olInherit olFont olFontNormal olFontBlue">
+                                            <input type="olTypesearch" id="olMatterSearchInp" class="olInherit olInput olRounded olFont olFontNormal olFontBlue" tabindex="1"/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <br />
+                                <!-- <div id="olMatterSearchResults" class="olInherit olDTable"> -->
+                                <!-- <table id="olTblMatterSearchTable" cellpadding="0" cellspacing="0" border="0" class="olInherit olDTable olFont olFontBlue olFontNormal display"></table> -->
+                                <div id="olMatterSearchResults" class="olInherit olTable">
+                                    <div class="olTableFrame olTableTopFrame"></div>
+                                    <table id="olTblMatterSearchTable" cellpadding="1" cellspacing="1" border="0" class="olInherit olTable olFont olFontBlue olFontNormal">
+                                        <thead>
+                                            <tr class="olTableHeader">
+                                                <th id="olFirstColumnName">
+                                                <div class="olFont olFontBlue olFontNormal">
+                                                    FirstColumnName
+                                                    <span id="olFirstColumnIconSpan" class="olSortingIcons olDownArrow">
+                                                    </span>
+                                                </div>
+                                                </th>
+                                                <th id="olSecondColumnName">
+                                                <div class="olFont olFontBlue olFontNormal">
+                                                    SecondColumnName
+                                                    <span id="olSecondColumnIconSpan" class="olSortingIcons olDoubleArrow">
+                                                    </span>
+                                                </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="olTableZeroRecords" class="olTableZeroRecordsRow">
+                                                <td class="olFont olFontBlue olFontNormal" colspan="2">
+                                                JS_NoMatterDetailsFound
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="olTableFrame olTableBottomFrame"></div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <footer class="olInherit">
+                                <div id="olMatterSearchIBottom" class="olInherit olFontNormal olDivInterface">
+                                    <span class="olInherit olFontNormal">
+                                        <div id="olMatterSearchPageNumber" class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal olFloatLeft">
+                                            <label class="olInherit olFont olFontBlue olLabel">
+                                                JS_LabelPage
+                                            </label>
+                                            <label id="olMatterSearchPage" class="olInherit olFont olFontBlue olLabel">
+                                                0
+                                            </label>
+                                            <label class="olInherit olLabel">
+                                                JS_LabelOf
+                                            </label>
+                                            <label id="olMatterSearchPageTotal" class="olInherit olFont olFontBlue olLabel">
+                                                1
+                                            </label>
+                                        </div>
+                                        <div id="olMatterSearchScr" class="olWidthAuto">
+                                            <p id = "olMatterSearchFakeScrContent">
+                                                .
+                                            </p>
+                                        </div>
+                                    </span>
+                                </div>
+                            </footer>
+                        </form>
+                    </div>
+                    <div id="olPromptLogon" class="olInherit olFont olFontNormal olFontBlue olPromptDivLook olPromptDivSizeNormal olOverlay">
+                        <!--
+                        --------------------------------------------------------------------------------------------------------*** Logon ***
+                        -->
+                        <a class="olInherit close">
+                        </a>
+                        <div id="olImgLogonCancel" class="olInherit olClose olImg olImg24"></div>
+                        <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                        <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                        JS_ChoosePassword
+                        </h2>
+                        <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                            <div class="olInherit olPromptDivScrolableNormal">
+                                <div id="olLogonAccounts" class="olInherit olDivInterface olFontNormal olWidth100"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="olPromptLogonDetails" class="olInherit olFont olFontNormal olFontBlue olPromptDivLook olPromptDivSizeNormal olOverlay" >
+                        <!--
+                        --------------------------------------------------------------------------------------------------------*** Logon details***
+                        -->
+                        <a class="olInherit close">
+                        </a>
+                        <div id="olImgPromptLogonDetailsCancel" class="olInherit olClose olImg olImg24"></div>
+                        <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                        <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                        <label class="olInherit olFont olFontBlue olLabel">
+                            JS_EditPassword
+                        </label>
+                        </h2>
+                        <form class="olInherit olPromptDivLookForm olFontNormal">
+                            <div id="olLogonDetails" class="olInherit olPromptMinHeightContentDiv olFontNormal">
+                                <div id="olLogonDetailsSubContainer" class="olInherit olFontNormal">
+                                    <div id="olTitle" class="olInherit olFontNormal olDivInterface">
+                                        <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal">
+                                            <label class="olInherit olFont olFontNormal olFontBlue olLabelInRow olLabelSizeMid">
+                                                JS_AccountTitle
+                                            </label>
+                                            <span class="olInherit olFontNormal">
+                                                <input type="olTypetext" id="olTitleData" class="olInherit olInput olRounded olFont olFontNormal olFontBlue" tabindex="1"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                                <br />
+                                <div id="olUsernamePasswordSection" class="olInherit olFontNormal olDivInterface olPromptDivScrolableY"></div>
+                            </div>
+                            <footer class="olInherit">
+                                <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal olWidthInherit">
+                                    <span class="olInherit">
+                                        <div class="olInherit olDivInterfaceRow olDivNoWrap olWidthInherit">
+                                            <label id="olInfoText" class="olInherit olFont olFontBlue olFontSmall olLabelInRow olLabelInfoText olDivNoWrap" title="">
+                                            </label>
+                                        </div>
+                                    </span>
+                                    <button id="olPromptLogonDetailsOK" type="button" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olFloatRight">
+                                        JS_OKLabel
+                                    </button>
+                                </div>
+                            </footer>
+                        </form>
+                    </div>
+
+                    <div id="olPromptLicenceLimitReached" class="olInherit olFont olFontBlue olPromptDivLook olPromptDivSizeBig olOverlay" >
+                        <!--
+                        --------------------------------------------------------------------------------------------------------*** Licence limit ***
+                        -->
+                        <a class="olInherit close">
+                        </a>
+                        <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                        <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                        JS_LicenceLimitReachedHeading
+                        </h2>
+                        <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                            <div class="olInherit olPromptDivScrolableNormal">
+                                <div id="olLicenceLimitReachedInfoText" class="olInherit olDivInterface olFontBig olWidth100">
+                                    JS_LicenceLimitReachedMessage
+                                </div>
+                                <div id="olPooledLicenceLimitReachedInfoText" class="olInherit olDivInterface olFontBig olWidth100">
+                                    JS_PooledLicenceLimitReachedMessage
+                                </div>
+                                <br />
+                                <div id="olLicenceLimitReachedInfoSubText" class="olInherit olDivInterface olFontNormal olWidth100">
+                                    JS_LicenceLimitReachedSubMessage
+                                </div>
+                                <div id="olPooledLicenceLimitReachedInfoSubText" class="olInherit olDivInterface olFontNormal olWidth100">
+                                    JS_PooledLicenceLimitReachedSubMessage
+                                </div>
+                                <br />
+                                <button id="olPromptLicenceLimitReachedOK" type="button" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olFloatRight">
+                                    JS_OKLabel
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    </div id="olEnvelopeResources">
+                    <div id="olEnvelopeChooseApplication">
+                        <div id="olPromptChooseApplication" class="olInherit olFont olFontBlue olPromptDivLook olPromptDivSizeNormal olOverlayChooseApplication" >
+                            <!--
+                            --------------------------------------------------------------------------------------------------------*** Choose Application ***
+                            -->
+                            <a class="olInherit close">
+                            </a>
+                            <div id="olCAImgChooseApplicationCancel" class="olInherit olClose olImg olImg24"></div>
+                            <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                            <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                            JS_ChooseResource
+                            </h2>
+                            <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                                <div class="olInherit olPromptDivScrolableNormal">
+                                    <div id="olChooseApplication" class="olInherit olDivInterface olFontNormal olWidth100"></div>
+                                </div>
+                            </form>
+                        </div>
+                        </div id="olEnvelopeChooseApplication">
+                        <div id="olEnvelopeResourceTimeout">
+                            <div id="olResourceTimeout" class="olInherit olFont olFontBlue olPromptDivLook olPromptDivSizeBig olOverlayTimeout" >
+                                <!--
+                                --------------------------------------------------------------------------------------------------------*** Resource timeout ***
+                                -->
+                                <a class="olInherit close">
+                                </a>
+                                <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                                <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                                JS_ResourceTimeoutLabel
+                                </h2>
+                                <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                                    <div class="olInherit olPromptDivScrolableNormal">
+                                        <div id="olResourceName" class="olInherit olDivInterface olFontBig olWidth100">
+                                            trt
+                                        </div>
+                                        <br />
+                                        <div class="olInherit olDivInterface olWidth100">
+                                            JS_InactivityText
+                                        </div>
+                                        <br />
+                                        <div id = "olTimeoutInfoText" class="olInherit olDivInterface olFontSmall olWidth100 olWhiteSpaceNormal">
+                                            JS_ResponseInfo
+                                        </div>
+                                        <br />
+                                        <span class="olWhiteSpaceNormal">
+                                            <button id="olResourceNo" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeBig olDisplayInline" title="Stay connected" type="button">
+                                                JS_NoLabel
+                                            </button>
+                                            <button id="olResourceYes" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeBig olDisplayInline olFloatRight" title="Disconnect" type="button">
+                                                JS_YesLabel
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            </div id="olEnvelopeResourceTimeout">
+                            <div id="olEnvelopeError">
+                                <div id="olError" class="olInherit olFont olFontBlue olPromptDivLook olPromptDivSizeBig olOverlayError" >
+                                    <!--
+                                    --------------------------------------------------------------------------------------------------------*** Error ***
+                                    -->
+                                    <a class="olInherit close">
+                                    </a>
+                                    <h2 class="olInherit olFont olFontVeryBig olFontBlue">
+                                    <div id="olImgLogo32" class="olInherit olMultipleColourImage olImg olImg32 olImgPrompt"></div>
+                                    JS_ConnectionError
+                                    </h2>
+                                    <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                                        <div class="olInherit olPromptDivScrolableNormal">
+                                            <br />
+                                            <div class="olInherit olDivInterface olWidth100 olWhiteSpaceNormal">
+                                                JS_ConnectionProblemText
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <button id="olErrorOK" type="button" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olFloatRight">
+                                                JS_OKLabel
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                </div id="olEnvelopeError">
+                                <div id="olEnvelopeWebControlMessage">
+                                    <div id="olWebControlMessage" class="olInherit olFont olFontBlue olPromptDivSizeBig olPromptDivLook olOverlayWebControlMessage">
+                                        <!--
+                                        --------------------------------------------------------------------------------------------------------*** Message ***
+                                        -->
+                                        <a class="olInherit close" style="display: none !important">
+                                        </a>
+                                        <form class="olInherit olPromptDivLookForm olFontNormal" tabindex="1">
+                                            <div class="olInherit olPromptDivScrolableY olDivInterface olWidth100 olHeightInherit">
+                                                <iFrame id="olWebControlMessageIFrame" class="olInherit olWidth100 olHeightInherit"></iFrame>
+                                            </div>
+                                        </form>
+                                        <div class="olInherit olDivInterfaceRow olDivNoWrap olFontNormal" style="width: inherit !important">
+                                            <span class="olInherit">
+                                                <div id="olChkboxDoNotShowContainer" class="olInherit olDivInterfaceRow olDivNoWrap" style="width: inherit !important">
+                                                    <input id="olChkboxDoNotShow" type="checkbox" class="olInherit olFont olFontBlue"/>
+                                                    JS_DoNotShow
+                                                </div>
+                                            </span>
+                                            <button id="olWebControlMessageOK" type="button" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olFloatRight">
+                                                JS_OKLabel
+                                            </button>
+                                        </div>
+                                    </div>
+                                    </div id="olEnvelopeWebControlMessage">
+                                    <div id="olEnvelopeStorePassword">
+                                        <div id="olStorePassword" class="olInherit olFont olFontNormal olFontBlue olPromptDivLook olPromptDivSizeNormal olOverlayAskToStorePassword" >
+                                            <!--
+                                            --------------------------------------------------------------------------------------------------------*** Store Password ***
+                                            -->
+                                            <a class="olInherit close">
+                                            </a>
+                                            <div id="olASPImgStorePasswordCancel" class="olInherit olClose olImg olImg24"></div>
+                                            <h2 class="olInherit olFont olFontVeryBig olFontBlue" ></h2>
+                                            <form class="olPromptDivLookForm olInherit olFontNormal" tabindex="1">
+                                                <div class="olInherit olPromptDivScrolableNormal">
+                                                    <div id="olStorePasswordContent" class="olInherit olDivInterface olFontNormal olWidth100 olWhiteSpaceNormal"></div>
+                                                </div>
+                                                <br />
+                                                <br />
+                                                <span class="olWhiteSpaceNormal">
+                                                    <button id="olStorePasswordNo" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olDisplayInline" title="Discard password" type="button">
+                                                        JS_NoLabel
+                                                    </button>
+                                                    <button id="olStorePasswordYes" class="olInherit olFontNormal olFontWhite olBtnNormal olBtnSizeMedium olDisplayInline olFloatRight" title="Save password" type="button">
+                                                        JS_YesLabel
+                                                    </button>
+                                                </span>
+                                            </form>
+                                        </div>
+                                        </div id="olEnvelopeStorePassword">
+                                        <div id="olEnvelopeToolbar">
+                                            <div id="olToolbar" class="olInherit olToolbarDivLook olFont olFontMedium olFontBlue olOverlayToolbar olMaxZ">
+                                                <!--
+                                                --------------------------------------------------------------------------------------------------------*** Toolbar ***
+                                                -->
+                                                <a class="olInherit close">
+                                                </a>
+                                                <div id="olToolbarMaximized" class="olInherit olFont olFontNormal olFontBlue">
+                                                    <div class="olInherit">
+                                                        <button id="olToolbarMin" type="button" title="Minimize toolbar" class="olInherit olMultipleColourImage olIconSmall olBtnSmall olBtnSizeSmall olFloatLeft"></button>
+                                                        <button id="olToolbarIcon" type="button" title="Onelog" class="olInherit olMultipleColourImage olIconSmall olBtnSmall olBtnSizeSmall olFloatLeft"></button>
+                                                        <button id="olToolbarRefresh" type="button" title="Fill in login details" class="olInherit olMultipleColourImage olIconSmall olBtnSmall olBtnSizeSmall olFloatLeft"></button>
+                                                        <label id="olToolbarTimer" class="olInherit olFont olFontMedium olFontBlue olTimerToolbar">
+                                                            Timer
+                                                        </label>
+                                                        <!-- <button olIconSrc="res/olToolbarPositionChange16.png" id="olToolbarPositionChange" type="button" title="Change toolbar position" class =" olIconNormal olBtnSmall olBtnSizeSmall" olStyleFixed="display:none">                     </button> -->
+                                                    </div>
+                                                    <div id="olToolbarMenu" class="olInherit olToolbarMenu olFont olFontNormal olFontBlue olWidthAuto">
+                                                        <br />
+                                                        <div id="olToolbarMenuMatter" class="olInherit olSelectableMenu olRounded olSelectableHeightAuto">
+                                                            JS_ManageMatter
+                                                        </div>
+                                                        <div id="olToolbarMenuLogon" class="olInherit olSelectableMenu olRounded olSelectableHeightAuto">
+                                                            JS_ManagePasswords
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="olToolbarMinimized" class="olInherit olFont olFontNormal olFontBlue">
+                                                    <button id="olToolbarMax" type="button" title="Maximize toolbar" class="olInherit olMultipleColourImage olIconNormal olBtnSmall olBtnSizeSmall"></button>
+                                                </div>
+                                            </div>
+                                            </div id="olEnvelopeToolbar">
+    </body>
+</html>

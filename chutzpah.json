@@ -1,0 +1,34 @@
+﻿{
+  "Framework": "jasmine",
+  "FrameworkVersion": "2.4.1",
+  "RootReferencePathMode": "SettingsFileDirectory",
+  "Compile": {
+    "Mode": "External",
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [".d.ts"]
+  },
+  "References": [
+    { "Path": "../PlainAngular/node_modules/jquery/jquery.js" },
+    { "Path": "../PlainAngular/node_modules/underscore/underscore.js" },
+    { "Path": "../PlainAngular/node_modules/angular/angular.js" },
+    { "Path": "../PlainAngular/node_modules/angular-resource/angular-resource.js" },
+    { "Path": "../PlainAngular/node_modules/angular-mocks/angular-mocks.js" },
+    { "Path": "../PlainAngular/typings" },
+    {
+      "Path": "../PlainAngular/app.js"
+
+    },
+    {
+      "Path": "../PlainAngular/modules",
+      "Includes": [ "*.js", "*.ts" ]
+    }
+
+  ],
+  "Tests": [
+    {
+      "Path": "../PlainAngular/Scripts/Test",
+      "Includes": ["*.js", "*.ts"]
+
+    }
+  ]
+}

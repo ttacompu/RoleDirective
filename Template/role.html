@@ -1,0 +1,29 @@
+﻿
+<div data-ng-class="{collapse : scheduleNotResponded}" ng-init="scheduleNotResponded = false">
+    
+        <div class="pull-right">
+            <span data-ng-init="collapseTitles = false" ng-show="!collapseTitles">
+                <button ng-init="titleExpend=true" type="button" class="btn-link" ng-click="ExpandCollapseAll()">{{titleExpend ? "Collapse" : "Expand"}}</button> 
+                <span ng-init="leastOneDeleted=false" ng-show="leastOneDeleted">
+                  | 
+                    <button ng-init="hideDeleted = true" type="button" class="btn-link" ng-click="ShowHideDeleted()">{{hideDeleted ? "Show Deleted" : "Hide Deleted"}}</button> |
+                    <button type="button" class="btn-link" ng-click="UndeleteAll()">Un Delete All</button>
+                </span>
+            </span>
+        </div>
+    
+    <div class="col-sm-12">
+        <div ng-repeat="name in titles" ng-show="!name.isDeleted" style="border-bottom:1px solid #ddd; margin-top:5px;">
+            <span ng-click="ExpandCollapse(name)" class="panel-title" style="cursor:pointer;font-weight:bold;display:inline-block;margin-bottom:8px;">{{name.title}} </span>
+            <span class="pull-right">
+                <button type="button" class="btn-link" ng-show="name.showDeleteTitle" ng-click="onDeleteTitle(name, true)">Delete Title</button>
+                <button type="button" class="btn-link" ng-show="name.showUnDeleteTitle" ng-click="onDeleteTitle(name, false)">UnDelete Title</button>
+                
+            </span>
+            <div ng-class="{collapse : name.isCollapsed}">
+                <div style="display:inline-block; width:250px; margin-right:10px;" class="well" ng-repeat="emp in name.employees" ng-hide="emp.isChanged">{{emp.name}} <span class="pull-right glyphicon glyphicon-refresh" ng-show="emp.isDeleted" ng-click="onUnDelete(emp)"></span><span class="pull-right glyphicon glyphicon-remove" ng-show="!emp.isDeleted" ng-click="onDeleteEmployee(emp)"></span></div>
+            </div>
+        </div>
+    </div>
+
+</div>

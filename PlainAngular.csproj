@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{6E3DC9CF-0FFA-41A9-A3B6-EE2740F5A071}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\npm.js" />
+    <Content Include="index.html" />
+    <Content Include="node_modules\angular-mocks\angular-mocks.js" />
+    <Content Include="node_modules\angular-mocks\ngAnimateMock.js" />
+    <Content Include="node_modules\angular-mocks\ngMock.js" />
+    <Content Include="node_modules\angular-mocks\ngMockE2E.js" />
+    <Content Include="node_modules\angular-resource\angular-resource.js" />
+    <Content Include="node_modules\angular-resource\angular-resource.min.js" />
+    <Content Include="node_modules\angular-resource\index.js" />
+    <Content Include="node_modules\angular\angular-csp.css" />
+    <Content Include="node_modules\angular\angular.js" />
+    <Content Include="node_modules\angular\angular.min.js" />
+    <Content Include="node_modules\angular\index.js" />
+    <Content Include="node_modules\jasmine\bin\jasmine.js" />
+    <Content Include="node_modules\jasmine\Gruntfile.js" />
+    <Content Include="node_modules\jasmine\lib\command.js" />
+    <Content Include="node_modules\jasmine\lib\exit.js" />
+    <Content Include="node_modules\jasmine\lib\filters\console_spec_filter.js" />
+    <Content Include="node_modules\jasmine\lib\jasmine.js" />
+    <Content Include="node_modules\jasmine\lib\printDeprecation.js" />
+    <Content Include="node_modules\jasmine\lib\reporters\console_reporter.js" />
+    <Content Include="node_modules\jasmine\lib\reporters\exit_code_reporter.js" />
+    <Content Include="node_modules\jasmine\node_modules\exit\Gruntfile.js" />
+    <Content Include="node_modules\jasmine\node_modules\exit\lib\exit.js" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\exit_test.js" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\10-stderr.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\10-stdout-stderr.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\10-stdout.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\100-stderr.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\100-stdout-stderr.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\100-stdout.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\1000-stderr.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\1000-stdout-stderr.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\1000-stdout.txt" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\log-broken.js" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\log.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\examples\g.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\examples\usr-local.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\glob.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\inherits\inherits.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\inherits\inherits_browser.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\inherits\test.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\minimatch.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\lib\lru-cache.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\basic.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\foreach.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\memory-leak.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\serialize.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\sigmund\bench.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\sigmund\sigmund.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\sigmund\test\basic.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\test\basic.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\test\brace-expand.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\test\caching.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\test\defaults.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\test\extglob-ending-with-state-char.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\00-setup.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\bash-comparison.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\cwd-test.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\globstar-match.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\mark.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\new-glob-optional-options.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\nocase-nomagic.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\pause-resume.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\readme-issue.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\root-nomount.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\root.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\stat.js" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\zz-cleanup.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\images\jasmine-horizontal.png" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\images\jasmine-horizontal.svg" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\images\jasmine_favicon.png" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\jasmine_core.egg-info\dependency_links.txt" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\jasmine_core.egg-info\requires.txt" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\jasmine_core.egg-info\SOURCES.txt" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\jasmine_core.egg-info\top_level.txt" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\console\console.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\boot.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\node_example\lib\jasmine_examples\Player.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\node_example\lib\jasmine_examples\Song.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\node_example\spec\helpers\jasmine_examples\SpecHelper.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\node_example\spec\jasmine_examples\PlayerSpec.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\spec\PlayerSpec.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\spec\SpecHelper.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\src\Player.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\example\src\Song.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\jasmine-html.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\jasmine.css" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\jasmine.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\json2.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\lib\jasmine-core\node_boot.js" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\requirements.txt" />
+    <Content Include="node_modules\jasmine\tasks\jasmine.js" />
+    <Content Include="node_modules\jquery\AUTHORS.txt" />
+    <Content Include="node_modules\jquery\build\release-notes.js" />
+    <Content Include="node_modules\jquery\build\release.js" />
+    <Content Include="node_modules\jquery\Gruntfile.js" />
+    <Content Include="node_modules\jquery\jquery-migrate.js" />
+    <Content Include="node_modules\jquery\jquery-migrate.min.js" />
+    <Content Include="node_modules\jquery\jquery.js" />
+    <Content Include="node_modules\jquery\jquery.min.js" />
+    <Content Include="node_modules\jquery\MIT-LICENSE.txt" />
+    <Content Include="node_modules\jquery\speed\benchmark.js" />
+    <Content Include="node_modules\jquery\speed\benchmarker.css" />
+    <Content Include="node_modules\jquery\speed\benchmarker.js" />
+    <Content Include="node_modules\jquery\speed\closest.html" />
+    <Content Include="node_modules\jquery\speed\css.html" />
+    <Content Include="node_modules\jquery\speed\event.html" />
+    <Content Include="node_modules\jquery\speed\filter.html" />
+    <Content Include="node_modules\jquery\speed\find.html" />
+    <Content Include="node_modules\jquery\speed\index.html" />
+    <Content Include="node_modules\jquery\speed\jquery-basis.js" />
+    <Content Include="node_modules\jquery\speed\slice.vs.concat.html" />
+    <Content Include="node_modules\jquery\src\ajax.js" />
+    <Content Include="node_modules\jquery\src\ajax\jsonp.js" />
+    <Content Include="node_modules\jquery\src\ajax\script.js" />
+    <Content Include="node_modules\jquery\src\ajax\xhr.js" />
+    <Content Include="node_modules\jquery\src\attributes.js" />
+    <Content Include="node_modules\jquery\src\callbacks.js" />
+    <Content Include="node_modules\jquery\src\core.js" />
+    <Content Include="node_modules\jquery\src\css.js" />
+    <Content Include="node_modules\jquery\src\data.js" />
+    <Content Include="node_modules\jquery\src\deferred.js" />
+    <Content Include="node_modules\jquery\src\deprecated.js" />
+    <Content Include="node_modules\jquery\src\dimensions.js" />
+    <Content Include="node_modules\jquery\src\effects.js" />
+    <Content Include="node_modules\jquery\src\event-alias.js" />
+    <Content Include="node_modules\jquery\src\event.js" />
+    <Content Include="node_modules\jquery\src\exports.js" />
+    <Content Include="node_modules\jquery\src\intro.js" />
+    <Content Include="node_modules\jquery\src\manipulation.js" />
+    <Content Include="node_modules\jquery\src\offset.js" />
+    <Content Include="node_modules\jquery\src\outro.js" />
+    <Content Include="node_modules\jquery\src\queue.js" />
+    <Content Include="node_modules\jquery\src\serialize.js" />
+    <Content Include="node_modules\jquery\src\sizzle-jquery.js" />
+    <Content Include="node_modules\jquery\src\support.js" />
+    <Content Include="node_modules\jquery\src\traversing.js" />
+    <Content Include="node_modules\jquery\test\data\1x1.jpg" />
+    <Content Include="node_modules\jquery\test\data\ajax\unreleasedXHR.html" />
+    <Content Include="node_modules\jquery\test\data\badcall.js" />
+    <Content Include="node_modules\jquery\test\data\badjson.js" />
+    <Content Include="node_modules\jquery\test\data\cleanScript.html" />
+    <Content Include="node_modules\jquery\test\data\core\cc_on.html" />
+    <Content Include="node_modules\jquery\test\data\dashboard.xml" />
+    <Content Include="node_modules\jquery\test\data\dimensions\documentLarge.html" />
+    <Content Include="node_modules\jquery\test\data\dimensions\documentSmall.html" />
+    <Content Include="node_modules\jquery\test\data\event\promiseReady.html" />
+    <Content Include="node_modules\jquery\test\data\event\syncReady.html" />
+    <Content Include="node_modules\jquery\test\data\iframe.html" />
+    <Content Include="node_modules\jquery\test\data\jquery-1.8.2.ajax_xhr.min.js" />
+    <Content Include="node_modules\jquery\test\data\json_obj.js" />
+    <Content Include="node_modules\jquery\test\data\manipulation\iframe-denied.html" />
+    <Content Include="node_modules\jquery\test\data\name.html" />
+    <Content Include="node_modules\jquery\test\data\offset\absolute.html" />
+    <Content Include="node_modules\jquery\test\data\offset\body.html" />
+    <Content Include="node_modules\jquery\test\data\offset\fixed.html" />
+    <Content Include="node_modules\jquery\test\data\offset\relative.html" />
+    <Content Include="node_modules\jquery\test\data\offset\scroll.html" />
+    <Content Include="node_modules\jquery\test\data\offset\static.html" />
+    <Content Include="node_modules\jquery\test\data\offset\table.html" />
+    <Content Include="node_modules\jquery\test\data\readywaitasset.js" />
+    <Content Include="node_modules\jquery\test\data\readywaitloader.js" />
+    <Content Include="node_modules\jquery\test\data\selector\html5_selector.html" />
+    <Content Include="node_modules\jquery\test\data\selector\sizzle_cache.html" />
+    <Content Include="node_modules\jquery\test\data\support\bodyBackground.html" />
+    <Content Include="node_modules\jquery\test\data\support\shrinkWrapBlocks.html" />
+    <Content Include="node_modules\jquery\test\data\support\testElementCrash.html" />
+    <Content Include="node_modules\jquery\test\data\test.html" />
+    <Content Include="node_modules\jquery\test\data\test.js" />
+    <Content Include="node_modules\jquery\test\data\test2.html" />
+    <Content Include="node_modules\jquery\test\data\test3.html" />
+    <Content Include="node_modules\jquery\test\data\testinit.js" />
+    <Content Include="node_modules\jquery\test\data\testrunner.js" />
+    <Content Include="node_modules\jquery\test\data\testsuite.css" />
+    <Content Include="node_modules\jquery\test\data\ua.txt" />
+    <Content Include="node_modules\jquery\test\data\with_fries.xml" />
+    <Content Include="node_modules\jquery\test\delegatetest.html" />
+    <Content Include="node_modules\jquery\test\hovertest.html" />
+    <Content Include="node_modules\jquery\test\index.html" />
+    <Content Include="node_modules\jquery\test\localfile.html" />
+    <Content Include="node_modules\jquery\test\networkerror.html" />
+    <Content Include="node_modules\jquery\test\readywait.html" />
+    <Content Include="node_modules\jquery\test\unit\ajax.js" />
+    <Content Include="node_modules\jquery\test\unit\attributes.js" />
+    <Content Include="node_modules\jquery\test\unit\callbacks.js" />
+    <Content Include="node_modules\jquery\test\unit\core.js" />
+    <Content Include="node_modules\jquery\test\unit\css.js" />
+    <Content Include="node_modules\jquery\test\unit\data.js" />
+    <Content Include="node_modules\jquery\test\unit\deferred.js" />
+    <Content Include="node_modules\jquery\test\unit\deprecated.js" />
+    <Content Include="node_modules\jquery\test\unit\dimensions.js" />
+    <Content Include="node_modules\jquery\test\unit\effects.js" />
+    <Content Include="node_modules\jquery\test\unit\event.js" />
+    <Content Include="node_modules\jquery\test\unit\exports.js" />
+    <Content Include="node_modules\jquery\test\unit\manipulation.js" />
+    <Content Include="node_modules\jquery\test\unit\offset.js" />
+    <Content Include="node_modules\jquery\test\unit\queue.js" />
+    <Content Include="node_modules\jquery\test\unit\selector.js" />
+    <Content Include="node_modules\jquery\test\unit\serialize.js" />
+    <Content Include="node_modules\jquery\test\unit\support.js" />
+    <Content Include="node_modules\jquery\test\unit\traversing.js" />
+    <Content Include="node_modules\angular-resource\angular-resource.min.js.map" />
+    <Content Include="node_modules\angular-resource\bower.json" />
+    <Content Include="node_modules\angular-resource\package.json" />
+    <Content Include="node_modules\angular-resource\README.md" />
+    <Content Include="bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="node_modules\underscore\LICENSE" />
+    <Content Include="node_modules\underscore\package.json" />
+    <Content Include="node_modules\underscore\README.md" />
+    <Content Include="node_modules\underscore\underscore-min.map" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="node_modules\underscore\underscore-min.js" />
+    <Content Include="node_modules\underscore\underscore.js" />
+    <Content Include="Template\role.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="node_modules\.bin\jasmine" />
+    <Content Include="node_modules\.bin\jasmine.cmd" />
+    <Content Include="node_modules\angular-mocks\bower.json" />
+    <Content Include="node_modules\angular-mocks\package.json" />
+    <Content Include="node_modules\angular-mocks\README.md" />
+    <Content Include="node_modules\angular\angular.min.js.gzip" />
+    <Content Include="node_modules\angular\angular.min.js.map" />
+    <Content Include="node_modules\angular\bower.json" />
+    <Content Include="node_modules\angular\package.json" />
+    <Content Include="node_modules\angular\README.md" />
+    <Content Include="node_modules\jasmine\.travis.yml" />
+    <Content Include="node_modules\jasmine\lib\examples\jasmine.json" />
+    <Content Include="node_modules\jasmine\node_modules\exit\.jshintrc" />
+    <Content Include="node_modules\jasmine\node_modules\exit\.npmignore" />
+    <Content Include="node_modules\jasmine\node_modules\exit\.travis.yml" />
+    <Content Include="node_modules\jasmine\node_modules\exit\LICENSE-MIT" />
+    <Content Include="node_modules\jasmine\node_modules\exit\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\exit\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\exit\test\fixtures\create-files.sh" />
+    <Content Include="node_modules\jasmine\node_modules\glob\.npmignore" />
+    <Content Include="node_modules\jasmine\node_modules\glob\.travis.yml" />
+    <Content Include="node_modules\jasmine\node_modules\glob\LICENSE" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\inherits\LICENSE" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\inherits\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\inherits\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\.npmignore" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\LICENSE" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\.npmignore" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\.travis.yml" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\CONTRIBUTORS" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\LICENSE" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\sigmund\LICENSE" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\sigmund\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\node_modules\sigmund\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\glob\node_modules\minimatch\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\glob\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\glob\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\glob\test\bash-results.json" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\.npmignore" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\bower.json" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\CONTRIBUTING.md" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\jasmine_core.egg-info\PKG-INFO" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\MANIFEST.in" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\MIT.LICENSE" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\package.json" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\README.md" />
+    <Content Include="node_modules\jasmine\node_modules\jasmine-core\RELEASE.md" />
+    <Content Include="node_modules\jasmine\package.json" />
+    <Content Include="node_modules\jasmine\README.md" />
+    <Content Include="node_modules\jquery\.editorconfig" />
+    <Content Include="node_modules\jquery\.gitattributes" />
+    <Content Include="node_modules\jquery\.gitmodules" />
+    <Content Include="node_modules\jquery\.jshintrc" />
+    <Content Include="node_modules\jquery\.npmignore" />
+    <Content Include="node_modules\jquery\component.json" />
+    <Content Include="node_modules\jquery\composer.json" />
+    <Content Include="node_modules\jquery\CONTRIBUTING.md" />
+    <Content Include="node_modules\jquery\jquery.min.map" />
+    <Content Include="node_modules\jquery\package.json" />
+    <Content Include="node_modules\jquery\README.md" />
+    <Content Include="node_modules\jquery\src\.jshintrc" />
+    <Content Include="node_modules\jquery\test\.jshintignore" />
+    <Content Include="node_modules\jquery\test\.jshintrc" />
+    <Content Include="node_modules\jquery\test\csp.php" />
+    <Content Include="node_modules\jquery\test\data\atom+xml.php" />
+    <Content Include="node_modules\jquery\test\data\echoData.php" />
+    <Content Include="node_modules\jquery\test\data\echoQuery.php" />
+    <Content Include="node_modules\jquery\test\data\errorWithText.php" />
+    <Content Include="node_modules\jquery\test\data\etag.php" />
+    <Content Include="node_modules\jquery\test\data\evalScript.php" />
+    <Content Include="node_modules\jquery\test\data\event\longLoadScript.php" />
+    <Content Include="node_modules\jquery\test\data\headers.php" />
+    <Content Include="node_modules\jquery\test\data\if_modified_since.php" />
+    <Content Include="node_modules\jquery\test\data\json.php" />
+    <Content Include="node_modules\jquery\test\data\jsonp.php" />
+    <Content Include="node_modules\jquery\test\data\name.php" />
+    <Content Include="node_modules\jquery\test\data\nocontent.php" />
+    <Content Include="node_modules\jquery\test\data\params_html.php" />
+    <Content Include="node_modules\jquery\test\data\script.php" />
+    <Content Include="node_modules\jquery\test\data\statusText.php" />
+    <Content Include="node_modules\jquery\test\data\test.php" />
+    <Content Include="node_modules\jquery\test\data\text.php" />
+    <Content Include="node_modules\jquery\test\data\with_fries_over_jsonp.php" />
+    <Content Include="node_modules\jquery\test\polluted.php" />
+    <Content Include="node_modules\jquery\test\xhtml.php" />
+    <Content Include="chutzpah.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="modules\Directives.ts" />
+    <TypeScriptCompile Include="modules\roleCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\Test\roleTest.ts" />
+    <TypeScriptCompile Include="typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PlainAngular</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63764</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63764/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
